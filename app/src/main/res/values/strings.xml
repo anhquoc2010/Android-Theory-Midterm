@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Midterm</string>
+    <string name="n">Đồ Ăn</string>
+    <string name="item_1">Item 1</string>
+    <string name="_50">$50</string>
+    <string name="add_item">Add Item</string>
+    <string name="pets">Pets</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="pet1">pet1</string>
+    <string name="mark">Mark</string>
+    <string name="month_s">month(s)</string>
+</resources>
