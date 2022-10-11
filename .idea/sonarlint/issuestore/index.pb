@@ -17,3 +17,17 @@ l
 <app/src/main/java/com/example/midterm_android/model/Pet.java,f\5\f56badfdfc0a9a96208a14a05efece3420cc1b43
 q
 Aapp/src/main/java/com/example/midterm_android/model/SinhVien.java,4\b\4b4ba823dfb5b06b5a419704b6df6b01ea78ce12
+u
+Eapp/src/main/java/com/example/midterm_android/view/LoginActivity.java,3\3\33426318a350d2c87ce2d4d85ff3b0484da2c6c8
+o
+?app/src/main/java/com/example/midterm_android/MainActivity.java,a\4\a4f543dd164458723f0086958735fbd0f4eacf03
+|
+Lapp/src/main/java/com/example/midterm_android/fragment/PetsListFragment.java,6\0\60dd0350e53b3bfc0d44eb2da9a1c99e12931477
+u
+Eapp/src/main/java/com/example/midterm_android/adapter/PetAdapter.java,9\1\91d3bf3fc263c4208c1485cdfd2f6f28631d5a8e
+{
+Kapp/src/main/java/com/example/midterm_android/fragment/ProfileFragment.java,1\e\1e21e1f4a46c29cbc783977586d0feb69878e082
+v
+Fapp/src/main/java/com/example/midterm_android/view/SignupActivity.java,0\7\07a43030d9d4898ac4c774c89cc21f3cf5c7d434
+x
+Happ/src/main/java/com/example/midterm_android/fragment/HomeFragment.java,e\5\e54145bd5d8189ab1c9f44ab35c67163d90eb416

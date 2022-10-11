@@ -1,0 +1,5 @@
+
+_
+java:S1192R"IDefine a constant instead of duplicating this literal "unmarked" 3 times.(šË½ó
+~
+java:S1319"hThe type of "petsList" should be an interface such as "List" rather than the implementation "ArrayList".(©Öí
