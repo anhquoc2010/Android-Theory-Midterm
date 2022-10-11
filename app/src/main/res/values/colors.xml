@@ -11,4 +11,7 @@
     <color name="green_light">#26CC90</color>
     <color name="gray">#EDEDED</color>
     <color name="gray_dark">#EDEDED</color>
+
+    <color name="blue">#314FBD</color>
+    <color name="gray_border">#E6E8EC</color>
 </resources>
