@@ -41,14 +41,19 @@
 
         <TextView
             android:id="@+id/tv_name"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
+            android:maxLines="1"
+            android:singleLine="true"
             android:text="@string/item_1"
             android:textColor="?attr/colorOnSurface"
             android:textSize="21sp"
             android:textStyle="bold"
+            app:layout_constrainedWidth="true"
             app:layout_constraintBottom_toTopOf="@id/tv_species"
+            app:layout_constraintEnd_toStartOf="@id/iv_mark"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@id/cv_avatar"
             app:layout_constraintTop_toTopOf="parent" />
 
