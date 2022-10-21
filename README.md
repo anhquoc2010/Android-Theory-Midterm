@@ -1,5 +1,9 @@
-# Android-Theory-Midterm
+### Android-Theory-Midterm
 Giữa Kỳ Lý Thuyết Android
+
+## Record
+https://user-images.githubusercontent.com/87579077/197254130-26956fbb-a1ac-40e8-b5ae-8d3261e11dcc.mp4
+
 
 ## Login
 <img src="report/2Login.jpg" width="300">
