@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="?attr/colorOnPrimary"
     tools:context=".fragment.ProfileFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -73,6 +73,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
             app:cardCornerRadius="10dp"
+            android:backgroundTint="?attr/colorOnPrimary"
             app:layout_constraintBottom_toBottomOf="@id/cv_avatar_profile"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/iv_background"
@@ -157,7 +158,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/count"
-            android:textColor="@color/black"
+            android:textColor="?attr/colorOnSurface"
             android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@id/v_line_count"
@@ -196,7 +197,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/count"
-            android:textColor="@color/black"
+            android:textColor="?attr/colorOnSurface"
             android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@id/v_line_count"
@@ -235,7 +236,7 @@
             android:src="@drawable/ic_baseline_person_pin_circle_24"
             app:layout_constraintStart_toStartOf="@id/cv_avatar_profile"
             app:layout_constraintTop_toBottomOf="@id/v_line_about"
-            app:tint="@color/black" />
+            app:tint="?attr/colorOnSurface" />
 
         <TextView
             android:id="@+id/tv_pet_behavior"
@@ -276,7 +277,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="100dp"
-            android:textColor="@color/black"
+            android:textColor="?attr/colorOnSurface"
             android:text="@string/my_birth"
             android:textSize="20sp"
             app:layout_constraintStart_toEndOf="@id/tv_birth_date_title"
@@ -296,7 +297,7 @@
             android:id="@+id/tv_gender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
+            android:textColor="?attr/colorOnSurface"
             android:text="@string/male"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="@id/tv_birth_date"
@@ -331,7 +332,7 @@
             android:src="@drawable/ic_baseline_pets_24"
             app:layout_constraintStart_toStartOf="@id/cv_avatar_profile"
             app:layout_constraintTop_toBottomOf="@id/v_line_behavior"
-            app:tint="@color/black" />
+            app:tint="?attr/colorOnSurface" />
 
         <TextView
             android:id="@+id/tv_pets"
@@ -374,7 +375,7 @@
             android:src="@drawable/ic_round_image_24"
             app:layout_constraintStart_toStartOf="@id/cv_avatar_profile"
             app:layout_constraintTop_toBottomOf="@id/v_line_pets"
-            app:tint="@color/black" />
+            app:tint="?attr/colorOnSurface" />
 
         <TextView
             android:id="@+id/tv_gallery"
@@ -520,7 +521,7 @@
     <!--                android:layout_width="wrap_content"-->
     <!--                android:layout_height="wrap_content"-->
     <!--                android:text="@string/my_name"-->
-    <!--                android:textColor="@color/black"-->
+    <!--                android:textColor="?attr/colorOnSurface"-->
     <!--                android:textSize="28sp"-->
     <!--                app:layout_constraintEnd_toEndOf="parent"-->
     <!--                app:layout_constraintStart_toStartOf="parent"-->

@@ -5,8 +5,7 @@
     android:id="@+id/single_pet_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="15dp"
-    android:background="@color/gray">
+    android:layout_marginTop="15dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -87,6 +86,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/bg_rounded_gray_rectangle"
             android:paddingHorizontal="10dp"
+            android:textColor="@color/black"
             android:paddingVertical="7dp"
             android:text="@string/item_1"
             android:textSize="21sp"

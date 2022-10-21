@@ -98,7 +98,7 @@
             android:src="@drawable/ic_baseline_pets_24"
             app:layout_constraintStart_toStartOf="@id/cv_pet_info"
             app:layout_constraintTop_toBottomOf="@id/cv_pet_info"
-            app:tint="@color/black" />
+            app:tint="?attr/colorOnSurface" />
 
         <TextView
             android:id="@+id/tv_about_pet"
@@ -116,6 +116,7 @@
             android:id="@+id/cv_pet_weight"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:backgroundTint="?attr/colorOnPrimary"
             app:cardCornerRadius="10dp"
             app:layout_constraintBottom_toBottomOf="@id/cv_pet_height"
             app:layout_constraintEnd_toStartOf="@id/cv_pet_height"
@@ -141,7 +142,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/weight_value"
-                    android:textColor="@color/black"
+                    android:textColor="?attr/colorOnSurface"
                     android:textSize="20sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -153,6 +154,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="10dp"
             android:layout_marginVertical="20dp"
+            android:backgroundTint="?attr/colorOnPrimary"
             app:cardCornerRadius="10dp"
             app:layout_constraintBottom_toTopOf="@id/tv_pet_description"
             app:layout_constraintEnd_toStartOf="@id/cv_pet_color"
@@ -178,7 +180,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/height_value"
-                    android:textColor="@color/black"
+                    android:textColor="?attr/colorOnSurface"
                     android:textSize="20sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -188,6 +190,7 @@
             android:id="@+id/cv_pet_color"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:backgroundTint="?attr/colorOnPrimary"
             app:cardCornerRadius="10dp"
             app:layout_constraintBottom_toBottomOf="@id/cv_pet_height"
             app:layout_constraintEnd_toEndOf="@id/cv_pet_info"
@@ -213,7 +216,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/color_value"
-                    android:textColor="@color/black"
+                    android:textColor="?attr/colorOnSurface"
                     android:textSize="20sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -221,11 +224,12 @@
 
         <TextView
             android:id="@+id/tv_pet_description"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/description"
             android:textAppearance="?attr/textAppearanceHeadline6"
+            app:layout_constraintEnd_toEndOf="@id/cv_pet_info"
             app:layout_constraintStart_toStartOf="@id/cv_pet_info"
             app:layout_constraintTop_toBottomOf="@id/cv_pet_height" />
 
@@ -247,7 +251,7 @@
             android:src="@drawable/ic_round_auto_awesome_24"
             app:layout_constraintStart_toStartOf="@id/cv_pet_info"
             app:layout_constraintTop_toBottomOf="@id/v_line_about"
-            app:tint="@color/black" />
+            app:tint="?attr/colorOnSurface" />
 
         <TextView
             android:id="@+id/tv_pet_behavior"
@@ -267,7 +271,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="@id/cv_pet_info"
             app:layout_constraintStart_toStartOf="@id/cv_pet_info"
-            app:layout_constraintTop_toBottomOf="@id/tv_pet_behavior"></com.google.android.material.chip.ChipGroup>
+            app:layout_constraintTop_toBottomOf="@id/tv_pet_behavior" />
 
         <View
             android:id="@+id/v_line_behavior"
@@ -287,7 +291,7 @@
             android:src="@drawable/ic_round_image_24"
             app:layout_constraintStart_toStartOf="@id/cv_pet_info"
             app:layout_constraintTop_toBottomOf="@id/v_line_behavior"
-            app:tint="@color/black" />
+            app:tint="?attr/colorOnSurface" />
 
         <TextView
             android:id="@+id/tv_pet_gallery"

@@ -9,8 +9,6 @@ q
 Aapp/src/main/java/com/example/midterm_android/model/SinhVien.java,4\b\4b4ba823dfb5b06b5a419704b6df6b01ea78ce12
 <
 build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
-P
- app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 y
 Iapp/src/main/java/com/example/midterm_android/adapter/GalleryAdapter.java,7\1\714094681157cd587de5ed4d069ce4a6ddde0111
 u
@@ -29,3 +27,11 @@ S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+u
+Eapp/src/main/java/com/example/midterm_android/adapter/PetAdapter.java,9\1\91d3bf3fc263c4208c1485cdfd2f6f28631d5a8e
+y
+Iapp/src/main/java/com/example/midterm_android/view/PetDetailActivity.java,9\1\91b543bec7ea54a69ac355ca7bd7b1b362b8bba1
+A
+gradle.properties,2\a\2afbb999f001938c88fa43fc2ef52abf0f8213e4
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e

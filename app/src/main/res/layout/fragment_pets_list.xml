@@ -30,6 +30,7 @@
             android:background="@drawable/rect_cursed"
             android:indeterminateTint="?attr/colorPrimary"
             android:visibility="visible"
+            android:foregroundGravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

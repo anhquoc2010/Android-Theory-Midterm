@@ -8,11 +8,14 @@
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/green_bottom_menu</item>
         <item name="colorSecondaryVariant">@color/green_light</item>
-        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@android:color/transparent</item>
         <!-- Customize your theme here. -->
+        <item name="colorSurface">@color/gray</item>
         <item name="bottomNavigationStyle">@style/Widget.App.BottomNavigationView</item>
+
+        <item name="android:fontFamily">@font/inter</item>
     </style>
 
     <style name="Widget.App.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
