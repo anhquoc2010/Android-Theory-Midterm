@@ -29,23 +29,36 @@ public class PetsListFragment extends Fragment {
 
         binding = FragmentPetsListBinding.inflate(inflater, container, false);
 
+        binding.progressBarPetList.setVisibility(View.GONE);
         addPets();
 
         petAdapter = new PetAdapter(getContext(), pets);
-        binding.rvPet.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
         binding.rvPet.setAdapter(petAdapter);
+        binding.rvPet.setHasFixedSize(true);
 
         return binding.getRoot();
     }
 
     private void addPets() {
         pets = new ArrayList<>();
-        pets.add(new Pet("Trần Đức Mạnh", "Hasky", true, 6, 45.5, 111.11, "Red", "hehe", R.drawable.pet1));
-        pets.add(new Pet("Huỳnh Tấn Lực", "Chihuahua", true, 12, 100.2, 150.12, "B&W", "hoho", R.drawable.pet2));
-        pets.add(new Pet("Trần Thị Kim Ngân", "Maddog", false, 3, 15.6, 30.77, "White", "huhu", R.drawable.pet3));
-        pets.add(new Pet("Hồ Quang Phúc", "Liverpool", true, 24, 140.2, 70.2, "Gray", "hihi", R.drawable.pet4));
-        pets.add(new Pet("Hồ Quang Phúc", "Liverpool", true, 24, 140.2, 70.2, "Gray", "hihi", R.drawable.pet4));
-        pets.add(new Pet("Hồ Quang Phúc", "Liverpool", true, 24, 140.2, 70.2, "Gray", "hihi", R.drawable.pet4));
-        pets.add(new Pet("Hồ Quang Phúc", "Liverpool", true, 24, 140.2, 70.2, "Gray", "hihi", R.drawable.pet4));
+        pets.add(new Pet("Kileonmusk", "Hasky", true, 6, 45.5, 111.11, "Red", "gaugau", R.drawable.pet1));
+        pets.add(new Pet("Shibaxianua", "Chihuahua", false, 12, 100.2, 150.12, "B&W", "grrrrr", R.drawable.pet2));
+        pets.add(new Pet("Hanakem Cheese", "Maddog", false, 3, 15.6, 30.77, "White", "angang", R.drawable.pet3));
+        pets.add(new Pet("Betting Helloyboy", "Beandog", true, 2, 140.2, 70.2, "Gray", "ecec", R.drawable.pet4));
+        pets.add(new Pet("Brusk", "Cherry", false, 1, 140.2, 70.2, "Orange", "kiiiii", R.drawable.pet5));
+        pets.add(new Pet("Kinding", "Calmdog", true, 3, 140.2, 70.2, "Green", "kaka", R.drawable.pet6));
+        pets.add(new Pet("Hem", "England Short", true, 4, 140.2, 70.2, "Light Yellow", "hihi", R.drawable.pet2));
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        binding.progressBarPetList.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        binding.progressBarPetList.setVisibility(View.GONE);
     }
 }

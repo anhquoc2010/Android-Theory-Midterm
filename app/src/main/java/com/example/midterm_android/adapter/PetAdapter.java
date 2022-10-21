@@ -1,17 +1,23 @@
 package com.example.midterm_android.adapter;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.midterm_android.model.Pet;
 import com.example.midterm_android.R;
+import com.example.midterm_android.view.PetDetailActivity;
 
 import java.util.ArrayList;
 
@@ -48,6 +54,19 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.ViewHolder> {
             holder.ivGender.setImageResource(R.drawable.female_black_24dp);
         }
         holder.ivAvatar.setImageResource(pet.getImageResourceID());
+
+        holder.layoutPetItem.setOnClickListener(v -> {
+            onClickDetailPet(pet);
+        });
+    }
+
+    private void onClickDetailPet(Pet pet) {
+        Intent intent = new Intent(context, PetDetailActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("pet", pet);
+        intent.putExtras(bundle);
+        context.startActivity(intent);
+        ((Activity) context).overridePendingTransition(R.anim.slide_in, R.anim.fade_out);
     }
 
     @Override
@@ -65,6 +84,7 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.ViewHolder> {
         TextView tvAge;
         ImageView ivGender;
         ImageView ivAvatar;
+        ConstraintLayout layoutPetItem;
 
         ImageView ivMark;
 
@@ -89,6 +109,8 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.ViewHolder> {
                     ivMark.setTag("unmarked");
                 }
             });
+
+            layoutPetItem = itemView.findViewById(R.id.single_pet_layout);
         }
     }
 }

@@ -31,9 +31,7 @@ public class MainActivity extends AppCompatActivity {
                 .addToBackStack(null)
                 .commit();
 
-        binding.topAppBar.setNavigationOnClickListener(v -> onBackPressed()
-                // Handle navigation icon press
-        );
+        binding.topAppBar.setNavigationOnClickListener(v -> onBackPressed());
 
         binding.bottomNavigation.setOnItemSelectedListener(item -> {
             switch (item.getItemId()) {
@@ -52,8 +50,6 @@ public class MainActivity extends AppCompatActivity {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | /*View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN |*/ View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
                     }
-                    return true;
-                case R.id.page_2:
                     return true;
                 case R.id.page_3:
                     getSupportFragmentManager().beginTransaction().setCustomAnimations(
@@ -78,12 +74,15 @@ public class MainActivity extends AppCompatActivity {
             // Handle navigation item reselection
             switch (item.getItemId()) {
                 case R.id.page_1:
-                    break;
-                case R.id.page_2:
-                    break;
                 case R.id.page_3:
                     break;
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }

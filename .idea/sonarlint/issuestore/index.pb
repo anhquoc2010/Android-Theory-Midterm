@@ -1,33 +1,7 @@
 
-<
-build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
 X
 (gradle/wrapper/gradle-wrapper.properties,f\b\fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
-@
-app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
 A
 gradle.properties,2\a\2afbb999f001938c88fa43fc2ef52abf0f8213e4
-S
-#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
-P
- app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
-y
-Iapp/src/main/java/com/example/midterm_android/custom/HexagonMaskView.java,7\8\78bfea9d410e260876626903b5a079dd6f234c1b
-l
-<app/src/main/java/com/example/midterm_android/model/Pet.java,f\5\f56badfdfc0a9a96208a14a05efece3420cc1b43
-q
-Aapp/src/main/java/com/example/midterm_android/model/SinhVien.java,4\b\4b4ba823dfb5b06b5a419704b6df6b01ea78ce12
-u
-Eapp/src/main/java/com/example/midterm_android/view/LoginActivity.java,3\3\33426318a350d2c87ce2d4d85ff3b0484da2c6c8
-o
-?app/src/main/java/com/example/midterm_android/MainActivity.java,a\4\a4f543dd164458723f0086958735fbd0f4eacf03
-|
-Lapp/src/main/java/com/example/midterm_android/fragment/PetsListFragment.java,6\0\60dd0350e53b3bfc0d44eb2da9a1c99e12931477
-u
-Eapp/src/main/java/com/example/midterm_android/adapter/PetAdapter.java,9\1\91d3bf3fc263c4208c1485cdfd2f6f28631d5a8e
-{
-Kapp/src/main/java/com/example/midterm_android/fragment/ProfileFragment.java,1\e\1e21e1f4a46c29cbc783977586d0feb69878e082
-v
-Fapp/src/main/java/com/example/midterm_android/view/SignupActivity.java,0\7\07a43030d9d4898ac4c774c89cc21f3cf5c7d434
-x
-Happ/src/main/java/com/example/midterm_android/fragment/HomeFragment.java,e\5\e54145bd5d8189ab1c9f44ab35c67163d90eb416
+@
+app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164

@@ -1,12 +1,14 @@
 package com.example.midterm_android.view;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -22,6 +24,7 @@ public class LoginActivity extends AppCompatActivity {
     private Button buttonLogin;
     private EditText editTextEmail;
     private EditText editTextPassword;
+    private CheckBox checkBoxRemember;
     private ProgressBar progressBar;
     private TextView textViewSignupLink;
 
@@ -36,11 +39,19 @@ public class LoginActivity extends AppCompatActivity {
         findViews();
         progressBar.setVisibility(ProgressBar.GONE);
 
+        SharedPreferences sharedPreferences = getSharedPreferences("dataLogin", MODE_PRIVATE);
+        String email = sharedPreferences.getString("email", "");
+        String password = sharedPreferences.getString("password", "");
+        boolean isRemember = sharedPreferences.getBoolean("isRemember", false);
+        editTextEmail.setText(email);
+        editTextPassword.setText(password);
+        checkBoxRemember.setChecked(isRemember);
+
         SinhVien sinhVien = (SinhVien) getIntent().getSerializableExtra("sinhvien");
 
         if (sinhVien != null) {
-            String email = sinhVien.getEmail().toString();
-            String password = sinhVien.getPassword().toString();
+            email = sinhVien.getEmail().toString();
+            password = sinhVien.getPassword().toString();
             editTextEmail.setText(email);
             editTextPassword.setText(password);
         }
@@ -61,6 +72,19 @@ public class LoginActivity extends AppCompatActivity {
                 editTextPassword.requestFocus();
             } else {
                 progressBar.setVisibility(android.view.View.VISIBLE);
+                if (checkBoxRemember.isChecked()) {
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("email", textEmail);
+                    editor.putString("password", textPassword);
+                    editor.putBoolean("isRemember", true);
+                    editor.apply();
+                } else {
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("email", "");
+                    editor.putString("password", "");
+                    editor.putBoolean("isRemember", false);
+                    editor.apply();
+                }
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 intent.putExtra("sinhVienNe", sinhVien);
                 startActivity(intent);
@@ -76,7 +100,20 @@ public class LoginActivity extends AppCompatActivity {
         buttonLogin = findViewById(R.id.button_login);
         editTextEmail = findViewById(R.id.editTextUserName_login);
         editTextPassword = findViewById(R.id.editTextPSWD_login);
+        checkBoxRemember = findViewById(R.id.checkBoxRemember);
         progressBar = findViewById(R.id.progressBarLogin);
         textViewSignupLink = findViewById(R.id.textView_register_link);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        progressBar.setVisibility(ProgressBar.GONE);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finishAffinity();
     }
 }

@@ -5,572 +5,763 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:scrollbars="none"
     tools:context=".fragment.ProfileFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="30dp">
+        android:layout_height="wrap_content">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/cl_image_info"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Space
-                android:id="@+id/space"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                app:layout_constraintDimensionRatio="1:0.6"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline35"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.35" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline47"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.47" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline53"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.53" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline65"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.65" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline50"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:orientation="horizontal"
-                app:layout_constraintGuide_percent="1.0" />
-
-            <ImageView
-                android:id="@+id/iv_background"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:contentDescription="@string/background"
-                android:scaleType="centerCrop"
-                android:src="@drawable/asian_young_girl_holding_kittens_park"
-                app:layout_constraintDimensionRatio="1:0.45"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageButton
-                android:id="@+id/ib_logout"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginTop="70dp"
-                android:background="@drawable/ic_baseline_circle_24"
-                android:contentDescription="@string/back"
-                android:src="@drawable/logout_white_36dp"
-                app:layout_constraintEnd_toEndOf="@id/iv_background"
-                app:layout_constraintTop_toTopOf="@id/iv_background" />
-
-            <com.example.midterm_android.custom.HexagonMaskView
-                android:id="@+id/iv_avatar"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:contentDescription="@string/avatar"
-                android:scaleType="centerCrop"
-                android:src="@drawable/lovely_pet_avatar"
-                app:layout_constraintBottom_toBottomOf="@id/guideline50"
-                app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintEnd_toEndOf="@id/guideline65"
-                app:layout_constraintStart_toStartOf="@id/guideline35"
-                tools:ignore="ImageContrastCheck" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/cl_info"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingHorizontal="30dp"
-            android:paddingTop="20dp"
+        <ImageView
+            android:id="@+id/iv_background"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/background"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pet6"
+            app:layout_constraintDimensionRatio="1:0.45"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cl_image_info">
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/tv_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/my_name"
-                android:textColor="@color/black"
-                android:textSize="28sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/tv_email"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/mail"
-                android:textSize="15sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_name" />
-
-            <TextView
-                android:id="@+id/tv_notice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="23dp"
-                android:text="@string/notice"
-                android:textAlignment="center"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_email" />
-
-            <View
-                android:id="@+id/v_dotted_line"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:background="@drawable/dotted_line"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintDimensionRatio="1:0.07"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_notice" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/cl_bio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingHorizontal="30dp"
-            android:paddingTop="30dp"
+        <ImageButton
+            android:id="@+id/ib_logout"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/ic_baseline_circle_24"
+            android:contentDescription="@string/logout"
+            android:padding="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logout_white_36dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_avatar_profile"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginStart="20dp"
+            app:cardCornerRadius="100dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_background"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cl_info">
+            app:layout_constraintTop_toBottomOf="@id/iv_background">
 
-            <TextView
-                android:id="@+id/tv_bio_ttl"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:text="@string/bio"
-                android:textSize="23sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@id/tv_bio"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/tv_bio"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/tv_bio"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toTopOf="@id/v_dotted_line2"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_bio_ttl" />
-
-            <View
-                android:id="@+id/v_dotted_line2"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:background="@drawable/dotted_line"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintDimensionRatio="1:0.07"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_bio" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/cl_gallery"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingHorizontal="30dp"
-            android:paddingTop="30dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cl_bio">
-
-            <TextView
-                android:id="@+id/tv_glr_ttl"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:text="@string/gallery"
-                android:textSize="23sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@id/gl_glr"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <GridLayout
-                android:id="@+id/gl_glr"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:columnCount="3"
-                android:rowCount="3"
-                android:useDefaultMargins="true"
-                app:layout_constraintBottom_toTopOf="@id/v_dotted_line3"
-                app:layout_constraintDimensionRatio="1:1"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_glr_ttl"
-                tools:ignore="TextContrastCheck">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="0dp">
-
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:contentDescription="@string/images"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/pet1"
-                            tools:ignore="ImageContrastCheck" />
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="0dp">
-
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:contentDescription="@string/images"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/pet2"
-                            tools:ignore="ImageContrastCheck" />
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="0dp">
-
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:contentDescription="@string/images"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/pet3"
-                            tools:ignore="ImageContrastCheck" />
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="0dp">
-
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:contentDescription="@string/images"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/pet4" />
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="0dp">
-
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:contentDescription="@string/images"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/pet5"
-                            tools:ignore="ImageContrastCheck" />
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="0dp">
-
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:contentDescription="@string/images"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/pet6"
-                            tools:ignore="ImageContrastCheck" />
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="0dp">
-
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:contentDescription="@string/images"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/pet2" />
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="0dp">
-
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:contentDescription="@string/images"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/pet1" />
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="0dp">
-
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:contentDescription="@string/images"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/pet5" />
-                    </RelativeLayout>
-                </androidx.cardview.widget.CardView>
-
-            </GridLayout>
-
-            <View
-                android:id="@+id/v_dotted_line3"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:background="@drawable/dotted_line"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintDimensionRatio="1:0.07"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/gl_glr" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/cl_links"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingHorizontal="30dp"
-            android:paddingTop="30dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cl_gallery">
-
-            <TextView
-                android:id="@+id/tv_links_ttl"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/links"
-                android:textSize="23sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@id/cl_social_links"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/cl_social_links"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginTop="15dp"
-                app:layout_constraintDimensionRatio="1:0.1"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_links_ttl">
+            <androidx.cardview.widget.CardView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="100dp"
+                app:cardElevation="0dp">
 
                 <ImageView
-                    android:id="@+id/ic_social_1"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:background="@drawable/circle"
-                    android:contentDescription="@string/link_social"
-                    android:padding="10dp"
+                    android:id="@+id/iv_avatar_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/gender"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/twitter"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintDimensionRatio="1:1"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/lovely_pet_avatar"
                     tools:ignore="ImageContrastCheck" />
+            </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_edit_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="@id/cv_avatar_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_background"
+            app:strokeColor="@color/green_bottom_menu"
+            app:strokeWidth="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/ic_social_2"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_marginStart="20dp"
-                    android:background="@drawable/circle"
-                    android:contentDescription="@string/link_social"
-                    android:padding="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:importantForAccessibility="no"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/facebook"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintDimensionRatio="1:1"
-                    app:layout_constraintStart_toEndOf="@id/ic_social_1"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:src="@drawable/ic_outline_edit_24"
+                    app:tint="@color/green_bottom_menu" />
 
-                <ImageView
-                    android:id="@+id/ic_social_3"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_marginStart="20dp"
-                    android:background="@drawable/circle"
-                    android:contentDescription="@string/link_social"
-                    android:padding="10dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/telegram"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintDimensionRatio="1:1"
-                    app:layout_constraintStart_toEndOf="@id/ic_social_2"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TooManyViews" />
+                <TextView
+                    android:id="@+id/tv_edit_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/edit_profile"
+                    android:textColor="@color/green_bottom_menu"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
-                <ImageView
-                    android:id="@+id/ic_social_4"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_marginStart="20dp"
-                    android:background="@drawable/circle"
-                    android:contentDescription="@string/link_social"
-                    android:padding="10dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/discord"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintDimensionRatio="1:1"
-                    app:layout_constraintStart_toEndOf="@id/ic_social_3"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TooManyViews" />
+        <TextView
+            android:id="@+id/tv_name_profile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/my_name"
+            android:textAppearance="?attr/textAppearanceHeadline5"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/cv_avatar_profile"
+            app:layout_constraintTop_toBottomOf="@id/cv_avatar_profile" />
 
-                <ImageView
-                    android:id="@+id/ic_social_5"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_marginStart="20dp"
-                    android:background="@drawable/circle"
-                    android:contentDescription="@string/link_social"
-                    android:padding="10dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/github"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintDimensionRatio="1:1"
-                    app:layout_constraintStart_toEndOf="@id/ic_social_4"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TooManyViews" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/iv_ic_verified"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="10dp"
+            android:importantForAccessibility="no"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_baseline_verified_24"
+            app:layout_constraintBottom_toBottomOf="@id/tv_name_profile"
+            app:layout_constraintStart_toEndOf="@id/tv_name_profile"
+            app:layout_constraintTop_toTopOf="@id/tv_name_profile"
+            tools:ignore="ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/tv_bio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/tv_bio"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            app:layout_constraintStart_toStartOf="@id/cv_avatar_profile"
+            app:layout_constraintTop_toBottomOf="@id/tv_name_profile" />
+
+        <TextView
+            android:id="@+id/tv_mail_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:drawablePadding="5dp"
+            android:text="@string/mail"
+            android:textSize="20sp"
+            app:drawableStartCompat="@drawable/ic_baseline_alternate_email_24"
+            app:layout_constraintStart_toStartOf="@id/cv_avatar_profile"
+            app:layout_constraintTop_toBottomOf="@id/tv_bio" />
+
+        <TextView
+            android:id="@+id/tv_pets_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/count"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/v_line_count"
+            app:layout_constraintEnd_toStartOf="@id/tv_pets_count_description"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/v_line_count" />
+
+        <TextView
+            android:id="@+id/tv_pets_count_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/pets"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/tv_pets_count"
+            app:layout_constraintEnd_toStartOf="@id/v_line_count"
+            app:layout_constraintStart_toEndOf="@id/tv_pets_count"
+            app:layout_constraintTop_toTopOf="@id/tv_pets_count" />
+
+        <View
+            android:id="@+id/v_line_count"
+            android:layout_width="3dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="15dp"
+            android:background="@color/gray_border"
+            app:layout_constraintBottom_toTopOf="@id/v_line_about"
+            app:layout_constraintEnd_toStartOf="@id/tv_friends_count"
+            app:layout_constraintStart_toEndOf="@id/tv_pets_count_description"
+            app:layout_constraintTop_toBottomOf="@id/tv_mail_profile" />
+
+        <TextView
+            android:id="@+id/tv_friends_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/count"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/v_line_count"
+            app:layout_constraintEnd_toStartOf="@id/tv_friends_count_description"
+            app:layout_constraintStart_toEndOf="@id/v_line_count"
+            app:layout_constraintTop_toTopOf="@id/v_line_count" />
+
+        <TextView
+            android:id="@+id/tv_friends_count_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/friends"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/tv_friends_count"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_friends_count"
+            app:layout_constraintTop_toTopOf="@id/tv_friends_count" />
+
+        <View
+            android:id="@+id/v_line_about"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginTop="30dp"
+            android:background="@color/gray_border"
+            app:layout_constraintTop_toBottomOf="@id/v_line_count" />
+
+        <ImageView
+            android:id="@+id/iv_ic_about_me"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="40dp"
+            android:importantForAccessibility="no"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_baseline_person_pin_circle_24"
+            app:layout_constraintStart_toStartOf="@id/cv_avatar_profile"
+            app:layout_constraintTop_toBottomOf="@id/v_line_about"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_pet_behavior"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:text="@string/about_me"
+            android:textAppearance="?attr/textAppearanceHeadline5"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/iv_ic_about_me"
+            app:layout_constraintStart_toEndOf="@id/iv_ic_about_me"
+            app:layout_constraintTop_toTopOf="@id/iv_ic_about_me" />
+        
+        <TextView
+            android:id="@+id/tv_edit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:text="@string/edit"
+            android:textAppearance="?attr/textAppearanceHeadline5"
+            android:textColor="?attr/colorPrimary"
+            app:layout_constraintEnd_toEndOf="@id/cv_edit_profile"
+            app:layout_constraintBottom_toBottomOf="@id/iv_ic_about_me"
+            app:layout_constraintTop_toTopOf="@id/iv_ic_about_me" />
+        
+        <TextView
+            android:id="@+id/tv_birth_date_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/birth_date"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@id/cv_avatar_profile"
+            app:layout_constraintTop_toBottomOf="@id/iv_ic_about_me" />
+        
+        <TextView
+            android:id="@+id/tv_birth_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:textColor="@color/black"
+            android:text="@string/my_birth"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@id/tv_birth_date_title"
+            app:layout_constraintTop_toTopOf="@id/tv_birth_date_title" />
+        
+        <TextView
+            android:id="@+id/tv_gender_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/gender_"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@id/cv_avatar_profile"
+            app:layout_constraintTop_toBottomOf="@id/tv_birth_date_title" />
+
+        <TextView
+            android:id="@+id/tv_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="@string/male"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@id/tv_birth_date"
+            app:layout_constraintTop_toTopOf="@id/tv_gender_title" />
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/tv_description"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            app:layout_constraintStart_toStartOf="@id/cv_avatar_profile"
+            app:layout_constraintEnd_toEndOf="@id/cv_edit_profile"
+            app:layout_constraintTop_toBottomOf="@id/tv_gender_title" />
+
+        <View
+            android:id="@+id/v_line_behavior"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginTop="40dp"
+            android:background="@color/gray_border"
+            app:layout_constraintTop_toBottomOf="@id/tv_description" />
+
+        <ImageView
+            android:id="@+id/iv_ic_pets"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="40dp"
+            android:importantForAccessibility="no"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_baseline_pets_24"
+            app:layout_constraintStart_toStartOf="@id/cv_avatar_profile"
+            app:layout_constraintTop_toBottomOf="@id/v_line_behavior"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_pets"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:text="@string/pets"
+            android:textAppearance="?attr/textAppearanceHeadline5"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/iv_ic_pets"
+            app:layout_constraintStart_toEndOf="@id/iv_ic_pets"
+            app:layout_constraintTop_toTopOf="@id/iv_ic_pets" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_pets"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="@id/cv_avatar_profile"
+            app:layout_constraintTop_toBottomOf="@id/tv_pets"
+            app:layout_constraintEnd_toEndOf="@id/cv_edit_profile"
+            android:layout_marginTop="16dp" />
+
+        <View
+            android:id="@+id/v_line_pets"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginTop="40dp"
+            android:background="@color/gray_border"
+            app:layout_constraintTop_toBottomOf="@id/rv_pets" />
+
+        <ImageView
+            android:id="@+id/iv_ic_gallery"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="40dp"
+            android:importantForAccessibility="no"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_round_image_24"
+            app:layout_constraintStart_toStartOf="@id/cv_avatar_profile"
+            app:layout_constraintTop_toBottomOf="@id/v_line_pets"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_gallery"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:text="@string/gallery"
+            android:textAppearance="?attr/textAppearanceHeadline5"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/iv_ic_gallery"
+            app:layout_constraintStart_toEndOf="@id/iv_ic_gallery"
+            app:layout_constraintTop_toTopOf="@id/iv_ic_gallery" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_gallery_profile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="16dp"
+            android:nestedScrollingEnabled="false"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/cv_avatar_profile"
+            app:layout_constraintTop_toBottomOf="@id/tv_gallery"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:spanCount="3" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+</ScrollView><!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    android:background="@color/white"-->
+    <!--    android:scrollbars="none"-->
+    <!--    tools:context=".fragment.ProfileFragment">-->
+
+    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:paddingBottom="30dp">-->
+
+    <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--            android:id="@+id/cl_image_info"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent">-->
+
+    <!--            <Space-->
+    <!--                android:id="@+id/space"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="0dp"-->
+    <!--                app:layout_constraintDimensionRatio="1:0.6"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--            <androidx.constraintlayout.widget.Guideline-->
+    <!--                android:id="@+id/guideline35"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:orientation="vertical"-->
+    <!--                app:layout_constraintGuide_percent="0.35" />-->
+
+    <!--            <androidx.constraintlayout.widget.Guideline-->
+    <!--                android:id="@+id/guideline47"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:orientation="vertical"-->
+    <!--                app:layout_constraintGuide_percent="0.47" />-->
+
+    <!--            <androidx.constraintlayout.widget.Guideline-->
+    <!--                android:id="@+id/guideline53"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:orientation="vertical"-->
+    <!--                app:layout_constraintGuide_percent="0.53" />-->
+
+    <!--            <androidx.constraintlayout.widget.Guideline-->
+    <!--                android:id="@+id/guideline65"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:orientation="vertical"-->
+    <!--                app:layout_constraintGuide_percent="0.65" />-->
+
+    <!--            <androidx.constraintlayout.widget.Guideline-->
+    <!--                android:id="@+id/guideline50"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="0dp"-->
+    <!--                android:orientation="horizontal"-->
+    <!--                app:layout_constraintGuide_percent="1.0" />-->
+
+    <!--            <ImageView-->
+    <!--                android:id="@+id/iv_background"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="0dp"-->
+    <!--                android:contentDescription="@string/background"-->
+    <!--                android:scaleType="centerCrop"-->
+    <!--                android:src="@drawable/asian_young_girl_holding_kittens_park"-->
+    <!--                app:layout_constraintDimensionRatio="1:0.45"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--            <ImageButton-->
+    <!--                android:id="@+id/ib_logout"-->
+    <!--                android:layout_width="48dp"-->
+    <!--                android:layout_height="48dp"-->
+    <!--                android:layout_marginEnd="20dp"-->
+    <!--                android:layout_marginTop="70dp"-->
+    <!--                android:background="@drawable/ic_baseline_circle_24"-->
+    <!--                android:contentDescription="@string/back"-->
+    <!--                android:src="@drawable/logout_white_36dp"-->
+    <!--                app:layout_constraintEnd_toEndOf="@id/iv_background"-->
+    <!--                app:layout_constraintTop_toTopOf="@id/iv_background" />-->
+
+    <!--            <com.example.midterm_android.custom.HexagonMaskView-->
+    <!--                android:id="@+id/iv_avatar"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="0dp"-->
+    <!--                android:contentDescription="@string/avatar"-->
+    <!--                android:scaleType="centerCrop"-->
+    <!--                android:src="@drawable/lovely_pet_avatar"-->
+    <!--                app:layout_constraintBottom_toBottomOf="@id/guideline50"-->
+    <!--                app:layout_constraintDimensionRatio="1:1"-->
+    <!--                app:layout_constraintEnd_toEndOf="@id/guideline65"-->
+    <!--                app:layout_constraintStart_toStartOf="@id/guideline35"-->
+    <!--                tools:ignore="ImageContrastCheck" />-->
+    <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--            android:id="@+id/cl_info"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:paddingHorizontal="30dp"-->
+    <!--            android:paddingTop="20dp"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@id/cl_image_info">-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tv_name"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="@string/my_name"-->
+    <!--                android:textColor="@color/black"-->
+    <!--                android:textSize="28sp"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tv_email"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="8dp"-->
+    <!--                android:text="@string/mail"-->
+    <!--                android:textSize="15sp"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@id/tv_name" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tv_notice"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="23dp"-->
+    <!--                android:text="@string/notice"-->
+    <!--                android:textAlignment="center"-->
+    <!--                android:textSize="20sp"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@id/tv_email" />-->
+
+    <!--            <View-->
+    <!--                android:id="@+id/v_dotted_line"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="0dp"-->
+    <!--                android:background="@drawable/dotted_line"-->
+    <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                app:layout_constraintDimensionRatio="1:0.07"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@id/tv_notice" />-->
+
+    <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--            android:id="@+id/cl_bio"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:paddingHorizontal="30dp"-->
+    <!--            android:paddingTop="30dp"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@id/cl_info">-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tv_bio_ttl"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginBottom="15dp"-->
+    <!--                android:text="@string/bio"-->
+    <!--                android:textSize="23sp"-->
+    <!--                android:textStyle="bold"-->
+    <!--                app:layout_constraintBottom_toTopOf="@id/tv_bio"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tv_bio"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="@string/tv_bio"-->
+    <!--                android:textSize="20sp"-->
+    <!--                app:layout_constraintBottom_toTopOf="@id/v_dotted_line2"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@id/tv_bio_ttl" />-->
+
+    <!--            <View-->
+    <!--                android:id="@+id/v_dotted_line2"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="0dp"-->
+    <!--                android:background="@drawable/dotted_line"-->
+    <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                app:layout_constraintDimensionRatio="1:0.07"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@id/tv_bio" />-->
+    <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--            android:id="@+id/cl_gallery"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:paddingHorizontal="30dp"-->
+    <!--            android:paddingTop="30dp"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@id/cl_bio">-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tv_glr_ttl"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginBottom="15dp"-->
+    <!--                android:text="@string/gallery"-->
+    <!--                android:textSize="23sp"-->
+    <!--                android:textStyle="bold"-->
+    <!--                app:layout_constraintBottom_toTopOf="@id/rv_gallery"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--            <androidx.recyclerview.widget.RecyclerView-->
+    <!--                android:id="@+id/rv_gallery"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="10dp"-->
+    <!--                android:layout_marginEnd="10dp"-->
+    <!--                android:nestedScrollingEnabled="false"-->
+    <!--                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"-->
+    <!--                app:layout_constraintBottom_toTopOf="@id/v_dotted_line3"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@id/tv_glr_ttl"-->
+    <!--                app:spanCount="3" />-->
+
+    <!--            <View-->
+    <!--                android:id="@+id/v_dotted_line3"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="2dp"-->
+    <!--                android:background="@drawable/dotted_line"-->
+    <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@id/rv_gallery" />-->
+    <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--            android:id="@+id/cl_links"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:paddingHorizontal="30dp"-->
+    <!--            android:paddingTop="30dp"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@id/cl_gallery">-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tv_links_ttl"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="@string/links"-->
+    <!--                android:textSize="23sp"-->
+    <!--                android:textStyle="bold"-->
+    <!--                app:layout_constraintBottom_toTopOf="@id/cl_social_links"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--                android:id="@+id/cl_social_links"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="0dp"-->
+    <!--                android:layout_marginTop="15dp"-->
+    <!--                app:layout_constraintDimensionRatio="1:0.1"-->
+    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@id/tv_links_ttl">-->
+
+    <!--                <ImageView-->
+    <!--                    android:id="@+id/ic_social_1"-->
+    <!--                    android:layout_width="0dp"-->
+    <!--                    android:layout_height="0dp"-->
+    <!--                    android:background="@drawable/circle"-->
+    <!--                    android:contentDescription="@string/link_social"-->
+    <!--                    android:padding="10dp"-->
+    <!--                    android:scaleType="centerCrop"-->
+    <!--                    android:src="@drawable/twitter"-->
+    <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                    app:layout_constraintDimensionRatio="1:1"-->
+    <!--                    app:layout_constraintStart_toStartOf="parent"-->
+    <!--                    app:layout_constraintTop_toTopOf="parent"-->
+    <!--                    tools:ignore="ImageContrastCheck" />-->
+
+    <!--                <ImageView-->
+    <!--                    android:id="@+id/ic_social_2"-->
+    <!--                    android:layout_width="0dp"-->
+    <!--                    android:layout_height="0dp"-->
+    <!--                    android:layout_marginStart="20dp"-->
+    <!--                    android:background="@drawable/circle"-->
+    <!--                    android:contentDescription="@string/link_social"-->
+    <!--                    android:padding="10dp"-->
+    <!--                    android:scaleType="centerCrop"-->
+    <!--                    android:src="@drawable/facebook"-->
+    <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                    app:layout_constraintDimensionRatio="1:1"-->
+    <!--                    app:layout_constraintStart_toEndOf="@id/ic_social_1"-->
+    <!--                    app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--                <ImageView-->
+    <!--                    android:id="@+id/ic_social_3"-->
+    <!--                    android:layout_width="0dp"-->
+    <!--                    android:layout_height="0dp"-->
+    <!--                    android:layout_marginStart="20dp"-->
+    <!--                    android:background="@drawable/circle"-->
+    <!--                    android:contentDescription="@string/link_social"-->
+    <!--                    android:padding="10dp"-->
+    <!--                    android:scaleType="centerCrop"-->
+    <!--                    android:src="@drawable/telegram"-->
+    <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                    app:layout_constraintDimensionRatio="1:1"-->
+    <!--                    app:layout_constraintStart_toEndOf="@id/ic_social_2"-->
+    <!--                    app:layout_constraintTop_toTopOf="parent"-->
+    <!--                    tools:ignore="TooManyViews,ImageContrastCheck" />-->
+
+    <!--                <ImageView-->
+    <!--                    android:id="@+id/ic_social_4"-->
+    <!--                    android:layout_width="0dp"-->
+    <!--                    android:layout_height="0dp"-->
+    <!--                    android:layout_marginStart="20dp"-->
+    <!--                    android:background="@drawable/circle"-->
+    <!--                    android:contentDescription="@string/link_social"-->
+    <!--                    android:padding="10dp"-->
+    <!--                    android:scaleType="centerCrop"-->
+    <!--                    android:src="@drawable/discord"-->
+    <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                    app:layout_constraintDimensionRatio="1:1"-->
+    <!--                    app:layout_constraintStart_toEndOf="@id/ic_social_3"-->
+    <!--                    app:layout_constraintTop_toTopOf="parent"-->
+    <!--                    tools:ignore="TooManyViews" />-->
+
+    <!--                <ImageView-->
+    <!--                    android:id="@+id/ic_social_5"-->
+    <!--                    android:layout_width="0dp"-->
+    <!--                    android:layout_height="0dp"-->
+    <!--                    android:layout_marginStart="20dp"-->
+    <!--                    android:background="@drawable/circle"-->
+    <!--                    android:contentDescription="@string/link_social"-->
+    <!--                    android:padding="10dp"-->
+    <!--                    android:scaleType="centerCrop"-->
+    <!--                    android:src="@drawable/github"-->
+    <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--                    app:layout_constraintDimensionRatio="1:1"-->
+    <!--                    app:layout_constraintStart_toEndOf="@id/ic_social_4"-->
+    <!--                    app:layout_constraintTop_toTopOf="parent"-->
+    <!--                    tools:ignore="TooManyViews" />-->
+    <!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+    <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+    <!--</ScrollView>-->

@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">Midterm</string>
+    <string name="app_name">Pet Booking</string>
     <string name="n">Đồ Ăn</string>
     <string name="item_1">Item 1</string>
     <string name="_50">$50</string>
@@ -20,7 +20,7 @@
     <string name="my_name">Lê Anh Quốc</string>
     <string name="mail">2050531200262@sv.ute.udn.vn</string>
     <string name="notice">🥇🥉 Pets is my lover. 😎😎</string>
-    <string name="tv_bio">PearUK is Le Anh Quoc\nStanding at airport Waiting for train</string>
+    <string name="tv_bio">PearUK is Le Anh Quoc 🍐🍐\nStanding at airport Waiting for train 🚂 ✈️</string>
     <string name="bio">Bio</string>
     <string name="gallery">Gallery</string>
     <string name="images">Images</string>
@@ -37,5 +37,28 @@
     <string name="okko">Agree with </string>
     <string name="term">Terms and conditions</string>
     <string name="is_has_account_yet">Had account?</string>
+    <string name="species_age">%1$s ∙ %2$.2f</string>
+    <string name="about_pet">About pet</string>
+    <string name="weight">Weight:</string>
+    <string name="weight_value">%1$.2f kg</string>
+    <string name="height">Height:</string>
+    <string name="height_value">%1$.2f cm</string>
+    <string name="color">Color:</string>
+    <string name="description">description</string>
+    <string name="pet_behavior">Pet\'s behavior</string>
+    <string name="pet_gallery">Pet\'s Gallery</string>
+    <string name="color_value">%1$s</string>
+    <string name="edit_profile">Edit profile</string>
+    <string name="count">%1$d</string>
+    <string name="friends">Friends</string>
+    <string name="logout">Logout</string>
+    <string name="remember_me">Remember me</string>
+    <string name="about_me">About me</string>
+    <string name="birth_date">Birth date:</string>
+    <string name="my_birth">20 Oct 2002</string>
+    <string name="gender_">Gender:</string>
+    <string name="male">Male</string>
+    <string name="edit">Edit</string>
+    <string name="tv_description">As an animal lover, I like to believe that the love we feel for animals is unconditional 💕 🐕 🐈 🌸</string>
 
 </resources>
