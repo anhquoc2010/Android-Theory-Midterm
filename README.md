@@ -1,5 +1,4 @@
 ### Android-Theory-Midterm
-<<<<<<< HEAD
 
 Giữa Kỳ Lý Thuyết Android
 
@@ -7,14 +6,6 @@ Giữa Kỳ Lý Thuyết Android
 
 https://user-images.githubusercontent.com/87579077/197254130-26956fbb-a1ac-40e8-b5ae-8d3261e11dcc.mp4
 
-=======
-Giữa Kỳ Lý Thuyết Android
-
-## Record
-https://user-images.githubusercontent.com/87579077/197254130-26956fbb-a1ac-40e8-b5ae-8d3261e11dcc.mp4
-
-
->>>>>>> 96980166c677e0d80aec9d0593a6a5577b957813
 ## Login
 
 <img src="report/2Login.jpg" width="300">

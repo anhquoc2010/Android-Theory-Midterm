@@ -25,3 +25,13 @@ o
 Kapp/src/main/java/com/example/midterm_android/fragment/ProfileFragment.java,1\e\1e21e1f4a46c29cbc783977586d0feb69878e082
 |
 Lapp/src/main/java/com/example/midterm_android/fragment/PetsListFragment.java,6\0\60dd0350e53b3bfc0d44eb2da9a1c99e12931477
+u
+Eapp/src/main/java/com/example/midterm_android/adapter/PetAdapter.java,9\1\91d3bf3fc263c4208c1485cdfd2f6f28631d5a8e
+A
+gradle.properties,2\a\2afbb999f001938c88fa43fc2ef52abf0f8213e4
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+y
+Iapp/src/main/java/com/example/midterm_android/view/PetDetailActivity.java,9\1\91b543bec7ea54a69ac355ca7bd7b1b362b8bba1
